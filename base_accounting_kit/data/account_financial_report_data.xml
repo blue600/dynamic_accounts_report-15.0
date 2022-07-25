@@ -100,7 +100,7 @@
 
         <record id="account_financial_report_liabilitysum0"
                 model="account.financial.report">
-            <field name="name">Liability</field>
+            <field name="name">Liability负债1</field>
             <field name="sequence">1</field>
             <field name="parent_id"
                    ref="account_financial_report_balancesheet0"/>
@@ -110,7 +110,7 @@
 
         <record id="account_financial_report_liability0"
                 model="account.financial.report">
-            <field name="name">Liability</field>
+            <field name="name">Liability负债2</field>
             <field name="parent_id"
                    ref="account_financial_report_liabilitysum0"/>
             <field name="display_detail">detail_with_hierarchy</field>
@@ -121,7 +121,7 @@
 
         <record id="account_financial_report_profitloss_toreport0"
                 model="account.financial.report">
-            <field name="name">Profit (Loss) to report</field>
+            <field name="name">Profit (Loss) to report损益汇总</field>
             <field name="parent_id"
                    ref="account_financial_report_liabilitysum0"/>
             <field name="display_detail">no_detail</field>
