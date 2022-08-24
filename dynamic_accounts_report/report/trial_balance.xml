@@ -13,7 +13,7 @@
             <t t-call="web.internal_layout">
                 <div class="page">
                     <div class="oe_structure"/>
-                    <h3 style="text-align:centre;left:50%;"><span t-esc="Filters.get('company_name')"/>: Trial Balance
+                    <h3 style="text-align:centre;left:50%;"><span t-esc="Filters.get('company_name')"/>: Trial Balance - harry1
                     </h3>
 
                     <span t-if="Filters.get('date_from')">
@@ -125,9 +125,9 @@
     </template>
 
     <record id="action_print_trial_balance" model="ir.actions.report">
-            <field name="name">Trial Balance</field>
+            <field name="name">Trial Balance - Harry2 </field>
             <field name="model">account.trial.balance</field>
-            <field name="report_type">qweb-pdf</field>
+            <field name="report_type">qweb-pdf</field >
             <field name="report_name">dynamic_accounts_report.trial_balance</field>
             <field name="report_file">dynamic_accounts_report.trial_balance</field>
     </record>

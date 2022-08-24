@@ -12,7 +12,7 @@ except ImportError:
 year = datetime.now().year
 
 
-class AccountCasgFlow(models.TransientModel):
+class AccountCashFlow(models.TransientModel):
     _name = "account.cash.flow"
     _inherit = "account.common.report"
 
@@ -439,7 +439,7 @@ class AccountCasgFlow(models.TransientModel):
     @api.model
     def create(self, vals):
         vals['target_move'] = 'posted'
-        res = super(AccountCasgFlow, self).create(vals)
+        res = super(AccountCashFlow, self).create(vals)
         return res
 
     def write(self, vals):
@@ -454,7 +454,7 @@ class AccountCasgFlow(models.TransientModel):
         if vals.get('account_ids') == []:
             vals.update({'account_ids': [(5,)]})
 
-        res = super(AccountCasgFlow, self).write(vals)
+        res = super(AccountCashFlow, self).write(vals)
         return res
 
     @api.model
